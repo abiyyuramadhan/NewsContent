@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TitikNews</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- icon -->
+  <link rel=" icon" href="img/titik.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <!-- header -->
+    <div class="jumbotron">
+      <h1>Titik<b>.</b>com</h1>
+      <p>Mengabarkan Keindahan Negara Indonesia</p>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: white;">
+      <div class="container">
+        <img src="titik.png" alt="" width="30">
+        <a class="navbar-brand" href="#"><b><img src="img/titik.png" width="10px">titik</b>.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- slide foto -->
+  <div class="container-img">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <!-- Content here -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="newsPage1">
+                <img src="img/1.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="news-title">
+                    <%= newsArr[0].title %>
+                  </h5>
+                  <p class="news-title">
+                    <%= newsArr[0].date[0] %>, <%= newsArr[0].date[1] %>
+                        <%= newsArr[0].date[2] %>
+                          <%= newsArr[0].date[3] %>
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel-item">
+              <a href="newsPage2">
+                <img src="img/2.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="news-title">
+                    <%= newsArr[1].title %>
+                  </h5>
+                  <p class="news-title">
+                    <%= newsArr[1].date[0] %>, <%= newsArr[1].date[1] %>
+                        <%= newsArr[1].date[2] %>
+                          <%= newsArr[1].date[3] %>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="newsPage3">
+                <img src="img/3.jpg" class="img-fluid d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="news-title">
+                    <%= newsArr[2].title %>
+                  </h5>
+                  <p class="news-title">
+                    <%= newsArr[2].date[0] %>, <%= newsArr[2].date[1] %>
+                        <%= newsArr[2].date[2] %>
+                          <%= newsArr[2].date[3] %>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="newsPage4">
+                <img src="img/4.jpeg" class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="news-title">
+                    <%= newsArr[3].title %>
+                  </h5>
+                  <p class="news-title">
+                    <%= newsArr[3].date[0] %>, <%= newsArr[3].date[1] %>
+                        <%= newsArr[3].date[2] %>
+                          <%= newsArr[3].date[3] %>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="latest_post">
+          <h2 class="latest-post"><span>Latest post</span></h2>
+          <div class="latest_post_container">
+            <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+            <ul class="latestt">
+              <li>
+                <div class="media"> <a href="newsPage1" class="media-left"> <img alt="" src="./img/5.jpg"> </a>
+                  <div class="media-body"> <a href="newsPage1" class="catg_title"> <%= newsArr[0].title %> </a> </div>
+                </div>
+              </li><br>
+              <li>
+                <div class="media"> <a href="newsPage2" class="media-left"> <img alt="" src="./img/6.jpg"> </a>
+                  <div class="media-body"> <a href="newsPage2" class="catg_title"> <%= newsArr[0].title %></a> </div>
+                </div>
+              </li><br>
+              <li>
+                <div class="media"> <a href="newsPage3" class="media-left"> <img alt="" src="./img/7.jpg"> </a>
+                  <div class="media-body"> <a href="newsPage3" class="catg_title"> <%= newsArr[2].title %></a> </div>
+                </div>
+              </li><br>
+              <li>
+                <div class="media"> <a href="newsPag4" class="media-left"> <img alt="" src="./img/8.jpg"> </a>
+                  <div class="media-body"> <a href="newsPage4" class="catg_title"> <%= newsArr[3].title %></a> </div>
+                </div>
+              </li>
+            </ul>
+            <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <p>News Project version 1.0.0 &#169; 2021, By Kelompok 2 </p>
+  </footer>
+
+
+  <script src="bootstrap.js"></script>
+</body>
+
+</html>
